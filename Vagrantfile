@@ -34,8 +34,8 @@ Vagrant.configure("2") do |config|
       # Set up a synced folder.
       config.vm.synced_folder "../../shared/", "/home/vagrant/shared"
 
-      # Configure the Vagrant VM automatically. Requires a RH subscription.
-      # config.vm.provision "shell", path: './provision.sh'
+      # Configure the Vagrant VM automatically.
+      config.vm.provision "shell", path: 'provision.sh'
     end
   end
 end
